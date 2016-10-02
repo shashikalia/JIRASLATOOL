@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE log4j:configuration SYSTEM "../../../migtoolcommon/util/code/resource/log4j.dtd">
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+
+	<appender name="ddtsjiraappender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="log/ddtsjira.log" />
+		<param name="MaxFileSize" value="1000MB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{ISO8601} ! %5p ! [%t] ! %C{2} !%X{transactionId} %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="DDTSJIRA" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="ddtsjiraappender" />
+	</logger>
+	
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="ddtsjiraappender" />
+	</root>
+
+</log4j:configuration>

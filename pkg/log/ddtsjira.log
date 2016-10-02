@@ -1,0 +1,4 @@
+2016-08-23 16:13:20,889 !  INFO ! [main] ! main.Main ! Starting SLA Tool..
+2016-08-23 16:13:20,940 !  INFO ! [main] ! properties.ReadProperties ! Reading Property File
+2016-08-23 16:13:21,661 !  INFO ! [main] ! main.Main ! Parsing Rest response received from Jira..
+2016-08-23 16:13:28,604 !  INFO ! [main] ! main.Main ! Creating Excel file for the issues
